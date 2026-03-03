@@ -1,0 +1,360 @@
+ //Programm to read and write array elements...........
+
+package ARRAY;
+import java.util.Scanner;
+public class Test
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in); // USING SCANNER CLASS
+System.out.println("Enter the size of an array");
+int sz=sc.nextInt();
+int x[]=new int[sz];
+System.out.println("Enter Array elements");
+for(int i=0;i<sz;i++)
+{
+	x[i]=sc.nextInt();
+}
+System.out.println("Printing the elements");
+for(int i=0;i<sz;i++)
+{
+	System.out.println(x[i]);
+}}
+}
+
+//Programm to calculate sum of element present in an array.........
+
+
+package ARRAY;
+
+public class Sumofelements
+{
+	public static void main(String[]args)
+	{
+		int[] x= {10,20,30,40};
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		int sum=0;
+		for(int i=0;i<x.length;i++)
+		{
+			sum=sum+x[i];
+		}
+		System.out.println("Sum of element present in array"+ sum);
+	}
+
+}
+
+//Program to calculate sum of even and odd elements of an array...........
+
+package ARRAY;
+
+public class EvenOdd 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {11,12,13,14,15};
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		int Sumeven=0;
+		int Sumodd=0;
+		for(int i=0;i<x.length;i++)
+		{
+			if(x[i]%2==0)
+				Sumeven= Sumeven+x[i];
+			else
+				Sumodd=Sumodd+x[i];
+			}
+		System.out.println("sum of the even elements in an array"+ Sumeven); 
+		System.out.println("sum of the odd elements in an array"+ Sumodd); 	
+	}
+
+}
+
+//Program to calculate the sum of +ve and -ve elements of an array.........
+
+package ARRAY;
+
+public class PositiveNegative
+{
+	public static void main(String[]args)
+	{
+	int[]x= {11,-12,13,-14};
+	int Psum=0;
+	int Nsum=0;
+	{
+		for(int i:x)
+		{
+			if(i>=0)
+				Psum=Psum+i;
+			else
+				Nsum=Nsum+i;
+		}
+	}
+	System.out.println("sum of positive elements="+ Psum);
+	System.out.println("sum of negative elements="+ Nsum);
+	
+	}
+
+}
+
+//Program to calculate the sum of prime numbers in an array.............
+
+class A
+{
+    public static void main(String[] args)
+    {
+        int[] x = {5, 7, 4, 8, 11};
+        m1(x);
+    }
+
+    public static void m1(int[] x)
+    {
+        int sum = 0;
+
+        for (int i = 0; i < x.length; i++)
+        {
+            int count = 0;
+
+            for (int j = 1; j <= x[i]; j++)
+            {
+                if (x[i] % j == 0)
+                {
+                    count++;
+                }
+            }
+
+            if (count == 2)
+            {
+                sum = sum + x[i];
+            }
+        }
+
+        System.out.println("The sum of prime no: " + sum);
+    }
+}
+
+//WAP TO PRINT SUM OF FACTORIAL OF ELEMENTS IN ARRAY...........
+
+package ARRAY;
+public class FactorialSum
+{
+	public static void main(String[]args)
+	{
+int[] arr= {3,4,5};
+int sum=0;
+
+for(int i=0;i<arr.length;i++)
+{
+    int fact=1;
+    for(int j=1;j<=arr[i];j++)
+    {
+        fact=fact*j;
+    }
+    sum=sum+fact;
+}
+System.out.println("sum of factorials="+sum);
+}}
+
+//WAP TO FIND THE MINIMUNM AND MAXIMUM ELEMENTS IN AN ARRAY.........
+
+package ARRAY;
+
+public class MaxMin 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {2,5,8,9};
+		int max=x[0];
+		int min=x[0];
+		for(int i=1;i<x.length;i++)
+		{
+			if (max<x[i])
+			{
+				max=x[i];
+			}
+			if(min>x[i])
+			{
+				min=x[i];
+			}
+		}
+		System.out.println("the max element"+ max);
+		System.out.println("the min element"+ min);
+	}
+
+}
+
+//WAP TO REPLACE OLD ELEMENT WITH NEW ELEMENT.......
+
+//Version 1: Update all occurance
+package ARRAY;
+import java.util.Scanner;
+public class Replace 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {10,20,30,20};                                                                                                 
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER OLD ELEMENT");
+		int old=sc.nextInt();
+		System.out.println("ENTER NEW ELE0ENT");
+		int newe=sc.nextInt();
+		for(int i=0;i<x.length;i++)
+		{
+			if(x[i]==old)
+			{
+				x[i]=newe;
+			}
+		}
+		System.out.println("AFTER UPDATION");
+		for(int i:x)
+		{
+			System.out.println(i);
+		}
+	}
+
+}
+
+//Version 2: Update only first occurance
+package ARRAY;
+import java.util.Scanner;
+public class Replace 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {10,20,30,20};                                                                                                 
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER OLD ELEMENT");
+		int old=sc.nextInt();
+		System.out.println("ENTER NEW ELE0ENT");
+		int newe=sc.nextInt();
+		for(int i=0;i<x.length;i++)
+		{
+			if(x[i]==old)
+			{
+				x[i]=newe;
+				break;
+			}
+		}
+		System.out.println("AFTER UPDATION");
+		for(int i:x)
+		{
+			System.out.println(i);
+		}
+	}
+
+}
+
+//Version 3: Update only second occurance
+
+package ARRAY;
+import java.util.Scanner;
+public class Replace 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {10,20,30,20};                                                                                                 
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER OLD ELEMENT");
+		int old=sc.nextInt();
+		System.out.println("ENTER NEW ELEMENT");
+		int newe=sc.nextInt();
+		int count=0;
+		for(int i=0;i<x.length;i++)
+		{
+			if(x[i]==old)
+			{
+				count++;
+				if(count==2)
+				{
+				x[i]=newe;
+			}
+				}
+		}
+		System.out.println("AFTER UPDATION");
+		for(int i:x)
+		{
+			System.out.println(i);
+		}
+	}
+
+}
+//Version 4: Update last occurance
+package ARRAY;
+import java.util.Scanner;
+public class Replace 
+{
+	public static void main(String[]args)
+	{
+		int[]x= {10,20,30,20,50,90,20};                                                                                                 
+		m1(x);
+	}
+	public static void m1(int[]x)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("ENTER OLD ELEMENT");
+		int old=sc.nextInt();
+		System.out.println("ENTER NEW ELEMENT");
+		int newe=sc.nextInt();
+		int count=0;
+		for(int i=x.length-1;i>=0;i--)
+		{
+			if(x[i]==old)
+			{
+				x[i]=newe;
+				break;
+			}		
+		}
+		System.out.println("AFTER UPDATION");
+		for(int i:x)
+		{
+			System.out.println(i);
+		}
+	}
+
+}
+//WAP TO FIND THE SECOND LARGEST ELEMENT........
+package ARRAY;
+
+public class SecondLargest
+{
+	public static void main(String[]args)
+	{
+		int[]x= {2,4,6,5};
+		int fl=x[0];
+		for(int i=1;i<x.length;i++)
+		{
+			if(x[i]>fl)
+			{
+				fl=x[i];
+			}
+		}
+		int sfl=x[0];
+		for(int i=1;i<x.length;i++)
+		{
+			
+			 if(x[i]>sfl && x[i] !=fl)
+			{
+				sfl=x[i];
+			}
+		}
+		System.out.println("FIRST LARGEST="+fl);
+		System.out.println("SECOND LARGEST="+sfl);
+	}
+
+}

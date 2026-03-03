@@ -1,0 +1,23 @@
+public class Test 
+{
+	public Test m1()
+	{
+		System.out.println("hello");
+		return new Test();
+	}
+	}
+class Abhi extends Test
+{
+	public Abhi m1()
+	{
+		System.out.println("hillloooo");
+		return new Abhi();
+	}
+}
+class A
+{
+	public static void main(String[]args)
+	{
+		Test t1=new Test();
+		t1 m1();
+}}

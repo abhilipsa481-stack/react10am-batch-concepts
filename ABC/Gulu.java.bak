@@ -1,0 +1,10 @@
+class Main 
+{
+	public static void main(String[] args) 
+	{
+		Object o=new Integer(12412);
+		Number n =(Number) o;
+		System.out.println("Hello World!");
+		System.out.println(n==o);
+	}
+}

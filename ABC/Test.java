@@ -1,0 +1,15 @@
+class Demo
+{
+	public void m1();
+	{
+		System.out.println("hello");
+	}
+public static void main(String[]args)
+{
+	System.out.println("dear");
+	Test t1=new Test();
+	 t1.m1();
+			System.out.println("abhi");
+}
+}
+
