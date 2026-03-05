@@ -1,0 +1,14 @@
+{
+    "user":[
+        {
+            "id":1,
+            "username":"abhilipsa",
+            "age":"21",
+            "email":"abhilipsa481@gmail.com",
+            "password":"123",
+            "dob":"14-feb-2005",
+            "city":"bbsr",
+            "gender":"female"
+        }
+    ]
+}
